@@ -1,0 +1,82 @@
+.title{
+    position: relative;
+    background-color:#aeb1c2;
+    padding: 5px 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: auto;
+    width:25%;
+    margin-top:25px;
+}
+
+h1{
+    font-size:30px;
+    color: aliceblue;
+    text-shadow: 0 0 10px #fff;
+}
+img{
+    height:230px;
+}
+
+@media screen and (min-width:700px) and (max-width: 1200px){
+   img{
+    height:210px;
+   }
+
+}
+
+figure{
+    position:relative; 
+    overflow: hidden;
+}
+
+figcaption{
+    --margin-value:15px;
+    position: absolute;
+    bottom:var(--margin-value);
+    left:  var(--margin-value);
+    right: var(--margin-value);
+    transform: translateY(calc(100% + var(--margin-value)));
+    transition: all 0.5s;
+    opacity: 0;
+
+}
+figure:hover figcaption{
+    transform: translateY(0px);
+    opacity:1;
+}
+.innerDiv{
+    width:45%;
+    margin:auto;
+    height:350px;
+    background-size:100% 100%; 
+    background-position: center;
+}
+@media screen and (max-width: 600px) {
+    .innerDiv{
+        height:270px;
+        width:320px;
+     }
+     .title{
+        width:65%;
+     }
+}
+@media screen and (min-width: 600px) and (max-width:750px){
+    .innerDiv{
+        height:300px;
+        width:350px;
+     }
+     .title{
+        width:50%;
+     }
+}
+
+@media screen and (min-width: 750px) and (max-width:1150px){
+
+     .title{
+        width:38%;
+     }
+}
+.innerDiv i{
+ cursor: pointer;
+}
